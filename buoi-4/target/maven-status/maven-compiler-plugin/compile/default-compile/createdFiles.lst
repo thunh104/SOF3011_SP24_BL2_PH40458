@@ -1,0 +1,5 @@
+com\example\buoi_4\service\SinhVienService.class
+com\example\buoi_4\entity\SinhVien$SinhVienBuilder.class
+com\example\buoi_4\HelloServlet.class
+com\example\buoi_4\controller\SinhVienServlet.class
+com\example\buoi_4\entity\SinhVien.class

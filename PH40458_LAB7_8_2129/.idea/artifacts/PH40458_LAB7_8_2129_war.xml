@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="PH40458_LAB7_8_2129:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>PH40458_LAB7_8_2129</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="PH40458_LAB7_8_2129-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="PH40458_LAB7_8_2129:war exploded" />
+    </root>
+  </artifact>
+</component>
