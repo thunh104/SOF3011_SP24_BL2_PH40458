@@ -11,7 +11,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "SanPhamServlet", value = {
-        "/san-pham/hien-thi"
+        "/san-pham/hien-thi",
+        "/san-pham/detail",
+        "/san-pham/update",
+        "/san-pham/remove"
 })
 public class SanPhamServlet extends HttpServlet {
     private List<SanPham> listsp = new ArrayList<>();
@@ -22,7 +25,17 @@ public class SanPhamServlet extends HttpServlet {
         String uri = request.getRequestURI();
         if (uri.contains("hien-thi")) {
             this.hienThiSanPham(request, response);
+        } else if (uri.contains("detail")) {
+            this.detailSanPham(request, response);
+        } else if (uri.contains("remove")) {
+            this.removeSanPham(request, response);
         }
+    }
+
+    private void removeSanPham(HttpServletRequest request, HttpServletResponse response) {
+    }
+
+    private void detailSanPham(HttpServletRequest request, HttpServletResponse response) {
     }
 
     private void hienThiSanPham(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -33,6 +46,12 @@ public class SanPhamServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String uri = request.getRequestURI();
+        if (uri.contains("update")) {
+            this.updateSanPham(request, response);
+        }
+    }
 
+    private void updateSanPham(HttpServletRequest request, HttpServletResponse response) {
     }
 }

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="luyen-tap-lab-78:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>luyen-tap-lab-78</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="luyen-tap-lab-78-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="luyen-tap-lab-78:war exploded" />
+    </root>
+  </artifact>
+</component>

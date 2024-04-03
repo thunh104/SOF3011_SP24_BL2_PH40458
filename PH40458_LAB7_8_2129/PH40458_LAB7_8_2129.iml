@@ -18,7 +18,9 @@
     <facet type="jpa" name="JPA">
       <configuration>
         <setting name="validation-enabled" value="true" />
-        <datasource-mapping />
+        <datasource-mapping>
+          <factory-entry name="PH40458_LAB7_8_2129" />
+        </datasource-mapping>
         <naming-strategy-map />
       </configuration>
     </facet>

@@ -20,36 +20,36 @@
 </header>
 <main class="container">
     <section>
-        <form action="#" method="post">
+        <form action="/may-tinh/add" method="post">
             <div class="row mt-4">
                 <div class="col-6">
                     <label>Mã</label>
-                    <input type="text" class="form-control"/>
+                    <input type="text" class="form-control" value="${sanPham.ma}"/>
                 </div>
                 <div class="col-6">
                     <label>Tên </label>
-                    <input type="text" class="form-control"/>
+                    <input type="text" class="form-control" value="${sanPham.ten}"/>
                 </div>
             </div>
             <div class="row mt-4">
                 <div class="col-6">
                     <label>Loại </label>
-                    <input type="text" class="form-control"/>
+                    <input type="text" class="form-control"  value="${sanPham.loai}"/>
                 </div>
                 <div class="col-6">
                     <label>Số lượng tồn</label>
-                    <input type="text" class="form-control"/>
+                    <input type="text" class="form-control" value="${sanPham.boNho}"/>
 
                 </div>
             </div>
             <div class="row mt-4">
                 <div class="col-6">
                     <label>Giá</label>
-                    <input type="text" class="form-control"/>
+                    <input type="text" class="form-control" value="${sanPham.gia}"/>
                 </div>
                 <div class="col-6">
                     <label>Miêu tả</label>
-                    <input type="text" class="form-control"/>
+                    <input type="text" class="form-control" value="${sanPham.mieuTa}"/>
                 </div>
             </div>
             <div class="row mt-4" style="justify-content: center">

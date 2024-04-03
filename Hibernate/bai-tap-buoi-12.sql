@@ -28,4 +28,4 @@ INSERT INTO sinh_vien (ma, ten, tuoi, dia_chi, gioi_tinh, lop_id) VALUES
 ('PH03', 'Nguyen Hong Anh', 19, 'Ha Noi 3', 1, 3),
 ('PH04', 'Nguyen Hoang Anh', 19, 'Ha Noi 4', 1, 4)
 
-DELETE FROM sinh_vien WHERE id = 6
+SELECT * FROM sinh_vien WHERE id = 6

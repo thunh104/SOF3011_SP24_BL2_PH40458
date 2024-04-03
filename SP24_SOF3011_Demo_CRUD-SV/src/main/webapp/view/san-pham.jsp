@@ -38,6 +38,23 @@
             </tr>
             </thead>
             <tbody>
+            <c:forEach items="${lists}" var="sp">
+                <tr>
+                    <td>${sp.id}</td>
+                    <td>${sp.ma}</td>
+                    <td>${sp.ten}</td>
+                    <td>${sp.gia}</td>
+                    <td>${sp.boNho}</td>
+                    <td>${sp.mauSac}</td>
+                    <td>${sp.hang}</td>
+                    <td>${sp.mieuTa}</td>
+                    <td>
+                        <button class="btn btn-outline-success"><a href="/may-tinh/detail?id=${sp.id}">Detail</a></button>
+                        <button class="btn btn-outline-warning"><a href="/may-tinh/view-update?id=${sp.id}">Update</a></button>
+                        <button class="btn btn-outline-danger"><a href="/may-tinh/remove?id=${sp.id}">Delete</a></button>
+                    </td>
+                </tr>
+            </c:forEach>
             </tbody>
         </table>
     </section>

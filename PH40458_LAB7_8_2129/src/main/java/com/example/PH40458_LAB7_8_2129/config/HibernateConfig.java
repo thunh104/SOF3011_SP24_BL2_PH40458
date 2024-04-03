@@ -1,4 +1,5 @@
 package com.example.PH40458_LAB7_8_2129.config;
+import com.example.PH40458_LAB7_8_2129.entity.ChiTietSanPham;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -14,13 +15,13 @@ public class HibernateConfig {
         Properties properties = new Properties();
         properties.put(Environment.DIALECT, "org.hibernate.dialect.SQLServerDialect");
         properties.put(Environment.DRIVER, "com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        properties.put(Environment.URL, "jdbc:sqlserver://localhost:1433;databaseName=Buoi12;encrypt=true;trustServerCertificate=true;");
+        properties.put(Environment.URL, "jdbc:sqlserver://localhost:1433;databaseName=LAB7_8;encrypt=true;trustServerCertificate=true;");
         properties.put(Environment.USER, "sa");
         properties.put(Environment.PASS, "123");
         properties.put(Environment.SHOW_SQL, "true");
 
         conf.setProperties(properties);
-//        conf.addAnnotatedClass(SinhVien.class);//Đăng kí với hibernate để mapped đối tượng, bao nhiêu class bấy nhiêu đối tượng
+        conf.addAnnotatedClass(ChiTietSanPham.class);//Đăng kí với hibernate để mapped đối tượng, bao nhiêu class bấy nhiêu đối tượng
         ServiceRegistry registry = new StandardServiceRegistryBuilder()
                 .applySettings(conf.getProperties()).build();
         FACTORY = conf.buildSessionFactory(registry);

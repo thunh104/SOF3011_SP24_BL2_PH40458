@@ -15,12 +15,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
 <div class="container">
     <ul class="nav nav-tabs">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Active</a>
+            <a class="nav-link active" aria-current="page" href="#">Sản phẩm</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="">Hoá đơn</a>
@@ -32,35 +33,35 @@
             <a class="nav-link" href="#">Giỏ hàng</a>
         </li>
     </ul>
-</div>
-<div class="">Sản phẩm</div>
-<br>
-<div class="container">
-    <button><i class="bi bi-person-plus">Thêm mới</i></button>
-</div>
-<table class="table">
-    <thead>
-    <tr>
-        <th>ID</th>
-        <th>Mã SP</th>
-        <th>Tên</th>
-        <th colspan="3">Action</th>
-    </tr>
-    </thead>
-    <tbody>
-    <c:forEach items="${sanPham}" var="sp">
+    <br>
+    <div class="row col-12 mt-3 mb-3">
+        <div class="col-10 fs-3 fw-semibold">Sản phẩm</div>
+        <div class="col-2"><button class="btn btn-outline-success">Thêm mới</button></div>
+    </div>
+    <table class="table ms-5">
+        <thead>
         <tr>
-            <td>${sp.id}</td>
-            <td>${sp.ma}</td>
-            <td>${sp.ten}</td>
-            <td>
-                <button class="btn btn-outline-success"><a href="">Detail</a></button>
-                <button class="btn btn-outline-warning"><a href="">Update</a></button>
-                <button class="btn btn-outline-danger"><a href="">Remove</a></button>
-            </td>
+            <th>ID</th>
+            <th>Mã SP</th>
+            <th>Tên</th>
+            <th colspan="3">Action</th>
         </tr>
-    </c:forEach>
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+        <c:forEach items="${sanPham}" var="sp">
+            <tr>
+                <td>${sp.id}</td>
+                <td>${sp.ma}</td>
+                <td>${sp.ten}</td>
+                <td>
+                    <a href="/san-pham/detail?id=${sp.id}"><i class="bi bi-eye me-2"></i></a>
+                    <a href="/san-pham/update?id=${sp.id}"><i class="bi bi-pencil-square ms-4 me-4"></i></a>
+                    <a href="/san-pham/remove?id=${sp.id}"><i class="bi bi-trash3 ms-2"></i></a>
+                </td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+</div>
 </body>
 </html>

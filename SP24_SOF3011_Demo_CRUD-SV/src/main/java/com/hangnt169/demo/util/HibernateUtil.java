@@ -1,5 +1,6 @@
 package com.hangnt169.demo.util;
 
+import com.hangnt169.demo.entity.SanPham;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -23,11 +24,11 @@ public class HibernateUtil {
         properties.put(Environment.DRIVER, "com.microsoft.sqlserver.jdbc.SQLServerDriver");
         properties.put(Environment.URL, "jdbc:sqlserver://localhost:1433;databaseName=demo");
         properties.put(Environment.USER, "sa");
-        properties.put(Environment.PASS, "Password.1");
+        properties.put(Environment.PASS, "123");
         properties.put(Environment.SHOW_SQL, "true");
 
         conf.setProperties(properties);
-
+        conf.addAnnotatedClass(SanPham.class);
         ServiceRegistry registry = new StandardServiceRegistryBuilder()
                 .applySettings(conf.getProperties()).build();
         FACTORY = conf.buildSessionFactory(registry);
