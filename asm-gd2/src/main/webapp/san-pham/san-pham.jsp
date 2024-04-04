@@ -19,31 +19,47 @@
 </head>
 <body>
 <div class="container">
-    <ul class="nav nav-tabs">
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Sản phẩm</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="">Hoá đơn</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Tài khoản</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Giỏ hàng</a>
-        </li>
-    </ul>
+    <div class="container mt-2">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Sản phẩm</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Hoá đơn</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Tài khoản</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Giỏ hàng</a>
+            </li>
+        </ul>
+    </div>
     <br>
     <div class="row col-12 mt-3 mb-3">
-        <div class="col-10 fs-3 fw-semibold">Sản phẩm</div>
-        <div class="col-2"><button class="btn btn-outline-success">Thêm mới</button></div>
+        <div class="col-10 fs-4 fw-semibold">Sản phẩm</div>
     </div>
-    <table class="table ms-5">
+    <form action="/san-pham/add" method="post">
+        <div class="container row col-12">
+            <div class="mb-3 col-6">
+                <label for="inputMa" class="form-label">Mã sản phẩm</label>
+                <input type="text" class="form-control" id="inputMa" name="ma" value="${detailSP.ma}">
+            </div>
+            <div class="mb-3 col-6">
+                <label for="inputTen" class="form-label">Tên sản phẩm</label>
+                <input type="text" class="form-control" id="inputTen" name="ten" value="${detailSP.ten}">
+            </div>
+        </div>
+        <div class="container text-content">
+            <button class="btn btn-outline-success" type="submit">Thêm mới</button>
+        </div>
+    </form>
+    <table class="table ms-2 me-3">
         <thead>
         <tr>
             <th>ID</th>
-            <th>Mã SP</th>
-            <th>Tên</th>
+            <th>Mã sản phẩm</th>
+            <th>Tên sản phẩm</th>
             <th colspan="3">Action</th>
         </tr>
         </thead>
@@ -55,7 +71,7 @@
                 <td>${sp.ten}</td>
                 <td>
                     <a href="/san-pham/detail?id=${sp.id}"><i class="bi bi-eye me-2"></i></a>
-                    <a href="/san-pham/update?id=${sp.id}"><i class="bi bi-pencil-square ms-4 me-4"></i></a>
+                    <a href="/san-pham/view-update?id=${sp.id}"><i class="bi bi-pencil-square ms-4 me-4"></i></a>
                     <a href="/san-pham/remove?id=${sp.id}"><i class="bi bi-trash3 ms-2"></i></a>
                 </td>
             </tr>

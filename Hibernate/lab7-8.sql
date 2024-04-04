@@ -1071,3 +1071,6 @@ GO
 ALTER TABLE [dbo].[SanPhamHoan]  WITH CHECK ADD FOREIGN KEY([idCTSP])
 REFERENCES [dbo].[chiTietSanPham] ([idCTSP])
 GO
+
+SELECT * FROM chiTietSanPham
+DELETE FROM chiTietSanPham WHERE idCTSP = 1
