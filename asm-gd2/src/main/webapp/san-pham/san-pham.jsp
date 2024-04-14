@@ -20,22 +20,65 @@
 <body>
 <div class="container">
     <div class="container mt-2">
-        <ul class="nav nav-tabs">
+        <ul class="nav nav-pills">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Sản phẩm</a>
+                <a class="nav-link" href="/san-pham/hien-thi">Sản phẩm</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">Hoá đơn</a>
+                <a class="nav-link" href="/hoa-don/hien-thi">Hoá đơn</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Tài khoản</a>
+                <a class="nav-link" href="/mau-sac/hien-thi">Màu sắc</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Giỏ hàng</a>
+                <a class="nav-link" href="/chuc-vu/hien-thi">Chức vụ</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/nha-san-xuat/hien-thi">Nhà sản xuất</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/khach-hang/hien-thi">Khách hàng</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/chi-tiet-san-pham/hien-thi">Chi tiết sản phẩm</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/cua-hang/hien-thi">Cửa hàng</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/dong-san-pham/hien-thi">Dòng sản phẩm</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/gio-hang/hien-thi">Giỏ hàng</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/gio-hang-chi-tiet/hien-thi">Giỏ hàng chi tiết</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/hoa-don-chi-tiet/hien-thi">Hóa đơn chi tiết</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/nhan-vien/hien-thi">Nhân viên</a>
             </li>
         </ul>
     </div>
     <br>
+    <div class="row col-12 mt-3 mb-3">
+        <div class="col-12 fs-4 fw-semibold">Bộ lọc</div>
+        <hr>
+        <div class="mb-3 col-6">
+            <label for="inputSearch" class="form-label">Tìm kiếm</label>
+            <input type="text" class="form-control" id="inputSearch"
+                   placeholder="Tìm kiếm theo sản phẩm...">
+        </div>
+        <div class="mb-3 col-6">
+            <label for="inputSearch" class="form-label">Trạng thái</label>
+            <select class="form-select" aria-label="Default select example">
+                <option value="Đang hoạt động">Đang hoạt động</option>
+                <option value="Dừng hoạt động">Dừng hoạt động</option>
+            </select>
+        </div>
+    </div>
     <div class="row col-12 mt-3 mb-3">
         <div class="col-10 fs-4 fw-semibold">Sản phẩm</div>
     </div>

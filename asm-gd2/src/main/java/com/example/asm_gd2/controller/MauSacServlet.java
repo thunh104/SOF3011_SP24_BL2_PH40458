@@ -44,7 +44,7 @@ public class MauSacServlet extends HttpServlet {
         String id = request.getParameter("id");
         MauSac ms = mauSacRepository.getOne(Long.parseLong(id));
         request.setAttribute("updateMS", ms);
-        request.getRequestDispatcher("/mau-sac/update-mau-sac.jsp").forward(request, response);
+        request.getRequestDispatcher("/san-pham/update-mau-sac.jsp").forward(request, response);
     }
 
     private void removeMauSac(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -60,13 +60,13 @@ public class MauSacServlet extends HttpServlet {
         request.setAttribute("detailMS", ms);
         listms = mauSacRepository.getAll();
         request.setAttribute("mauSac", listms);
-        request.getRequestDispatcher("/mau-sac/mau-sac.jsp").forward(request, response);
+        request.getRequestDispatcher("/san-pham/mau-sac.jsp").forward(request, response);
     }
 
     private void hienThiMauSac(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         listms = mauSacRepository.getAll();
         request.setAttribute("mauSac", listms);
-        request.getRequestDispatcher("/mau-sac/mau-sac.jsp").forward(request, response);
+        request.getRequestDispatcher("/san-pham/mau-sac.jsp").forward(request, response);
     }
     @SneakyThrows
     @Override

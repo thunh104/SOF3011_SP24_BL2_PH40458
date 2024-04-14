@@ -3,7 +3,7 @@ package com.example.asm_gd2.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.Date;
+import java.sql.Date;
 
 @Entity
 @Getter

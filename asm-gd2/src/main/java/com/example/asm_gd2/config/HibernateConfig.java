@@ -1,8 +1,6 @@
 package com.example.asm_gd2.config;
 
-import com.example.asm_gd2.entity.ChucVu;
-import com.example.asm_gd2.entity.MauSac;
-import com.example.asm_gd2.entity.SanPham;
+import com.example.asm_gd2.entity.*;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -26,9 +24,19 @@ public class HibernateConfig {
         properties.put(Environment.SHOW_SQL, "true");
 
         conf.setProperties(properties);
-        conf.addAnnotatedClass(SanPham.class);
-        conf.addAnnotatedClass(MauSac.class);
+        conf.addAnnotatedClass(ChiTietSanPham.class);
         conf.addAnnotatedClass(ChucVu.class);
+        conf.addAnnotatedClass(CuaHang.class);
+        conf.addAnnotatedClass(DongSanPham.class);
+        conf.addAnnotatedClass(GioHang.class);
+        conf.addAnnotatedClass(GioHangChiTiet.class);
+        conf.addAnnotatedClass(HoaDon.class);
+        conf.addAnnotatedClass(HoaDonChiTiet.class);
+        conf.addAnnotatedClass(KhachHang.class);
+        conf.addAnnotatedClass(MauSac.class);
+        conf.addAnnotatedClass(NhanVien.class);
+        conf.addAnnotatedClass(NhaSanXuat.class);
+        conf.addAnnotatedClass(SanPham.class);
         ServiceRegistry registry = new StandardServiceRegistryBuilder()
                 .applySettings(conf.getProperties()).build();
         FACTORY = conf.buildSessionFactory(registry);
